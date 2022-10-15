@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Advance Js) Iterators</title>
+
+    <!-- JavaScript : Iterators ( Looping ) -->
+    <!-- while()
+    do..while()
+    for()
+    for..of()
+    for..in()
+    foreach()
+    map()
+    // Added new loop //
+    Iterators() -->
+
+    <!-- Syntax in Iterators -->
+    <!-- var x = ["Apple","Mango","Orange"];
+
+    let y = x[Symbol.iterator]();
+    y.next(); -->
+
+    <script>
+        let numbers = [100,200,300];
+
+        let iter = numbers[Symbol.iterator]();
+        
+        iter.next();
+        console.log(iter.next());
+        console.log(iter.next());
+
+        // iterator use in loop //
+        let num = [100,200,300,400,500];
+
+        let iter2 = num[Symbol.iterator]();
+
+        let result = iter2.next();
+
+        while(!result.done){
+            console.log(result.value);
+            result = iter2.next();
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

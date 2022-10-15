@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Js Promise</title>
+
+    <!-- (Promise Syntax) -->
+
+    <!-- let prom = new Promise();
+
+    let prom = new Promise(function(){
+
+    });
+
+    let prom = new Promise(function(resolve,reject){
+
+    });
+
+    let prom = new Promise(function(resolve,reject){
+
+        if(condition){
+            resolve();
+
+        else{
+            reject();
+        }    
+        }
+    }); -->
+
+    <!-- (function call) -->
+
+    <!-- let onfulfilment = (result) =>{
+        console.log(result);
+    }
+
+    let onRejection = (error) =>{
+        console.log(error);
+    }
+
+    prom.then(onfulfilment); // call back function
+    prom.catch(onRejection); -->
+    
+    <script>
+        // let complete = true;
+
+        // let prom = new Promise(function(resolve,reject){
+        //     if(complete){
+        //         resolve("I am successfull.");
+        //     }else{
+        //         reject("I am failed");
+        //     }
+        // });
+
+        // console.log(prom);
+
+        // Function //
+        function prom (complete){
+            return new Promise(function(resolve, reject){
+                console.log("Fetching data, Please wait.")
+                setTimeout(() =>{
+                    if(complete){
+                      resolve("I am successfull.");
+                    }else{
+                      reject("I am failed");
+                    }
+                },3000)
+                });
+        }
+
+        let onfulfilment = (result) => {
+            console.log(result);
+        }
+
+        let onRejection = (error) => {
+            console.log(error);
+        }
+
+        prom(true).then(onfulfilment).catch(onRejection);
+
+        let 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

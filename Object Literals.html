@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Advance Js)Object Literals</title>
+
+    <script>
+        let name = "Rahul";
+        let course = "MCA";
+
+        // var obj = {
+        //     name : name,
+        //     course : course,
+        // };
+
+        var obj = {
+            name,
+            course,
+        };
+
+        console.log(obj);
+
+        // Use Variable as a Property Name [ES6 Version]
+
+        let n = "Name";
+
+        var obj1 = {
+            [n] : "Rahul Sharma",
+            course : "MCA"
+        }
+
+        console.log(obj1);
+
+        // Object Literals with Function
+
+        // let n = "Student";
+
+        // var obj = {
+        //     [n + "name"] : "Rahul",
+        //     course : "BCA",
+        //     detail : function(){
+        //         return `${this.Student} is Student of ${this.course}`
+        //     }
+        // };
+
+        // console.log(obj);
+        // console.log(obj.detail());
+
+        // Object Literals : New Function Syntax
+
+        let fname = "Rahul";
+        let lname = "Sharma"
+        let Course = "Btech";
+
+        function Student(fname, lname, Course){
+            let fullname = fname + " " + lname;
+            return {fullname, Course};
+        }
+
+        console.log(Student(fname, lname, Course));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

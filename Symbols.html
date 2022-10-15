@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Advance Js) Symbols</title>
+
+
+    <!--  Data Type 
+    var x = "Hello World";  // String //
+    var x = 25;  // Number //
+    var x = true;  // Boolean //
+    var x = ["HTML","CSS","JS"];  // Array //
+    var x = {first:"Rahul", last:"Sharma"}; // Object //
+    var x = null;  // Null //
+    var x;  // Undefined // -->
+
+    <!-- Added New Data Type in JavaScript  ( Symbol ) -->
+
+    <!-- Syntax in Symbol -->
+
+    <!-- var x = Symbol();
+    var x = Symbol("Hello");  // Unique value
+    var y = Symbol("Hello");
+
+    console.log( x===y ) // False Value -->
+
+     <script>
+        let id1 = Symbol("Hello");
+        let id2 = Symbol("Hello");
+        
+        console.log(id1);
+        // console.log(typeof id);
+        // console.log(id1 == id2);
+
+        // Symbol in String //
+        let str1 = "Hello";
+        let str2 = "Hello";
+        
+        console.log(str1 == str2);
+        
+        // Convert to String //
+        let doc = Symbol("Hello");
+
+        console.log(doc);
+        alert(doc.toString());
+        // alert(doc.description);
+
+        // Symbol use in Object //
+        let age = Symbol();
+
+        let user = {
+            name : 'Rahul Sharma',
+            class : 'MCA',
+            [age] : 25
+        };
+
+        console.log(user);
+
+     </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

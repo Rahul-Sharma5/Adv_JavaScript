@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Advance Js)Rest Operator</title>
+    <script>
+           function sum(name,course, ...args){
+               console.log(arguments);
+
+               document.write(`Hello ${name} of  ${course} : `);
+
+               let sum = 0;
+               for(let i in args){
+                   sum += args[i];
+               }
+               document.write(sum + "<br>");
+           }
+
+           sum("Rahul Sharma","BCA" ,20,30,40);
+           sum("Ram Sharma","MCA" ,2500,30,40);
+           sum("Luxman Sharma","MCA" ,2500,30,40,30,40,52,45);
+        //    sum(20,30);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

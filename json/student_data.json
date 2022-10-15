@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Rahul Sharma",
+        "age": "25",
+        "city": "Goa"
+    },
+    {
+        "name": "Aniket Kumar",
+        "age": "26",
+        "city": "Agra"
+    },
+    {
+        "name": "Satyajeet",
+        "age": "27",
+        "city": "Delhi"
+    }
+]

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Advance Js)Async_Await</title>
+
+    <script>
+
+        // // Async Function //
+        async function test(){
+            return "Hello";
+        }
+
+        // console.log(test());
+
+        test().then((result) =>{
+            console.log(result);
+        });
+
+        // Await Function //
+        async function test1(){
+            // console.log("2 : Message");
+            // await console.log("3 : Message");
+            const response = await fetch("json/student_data.json");
+            // console.log("3 : Message");
+            const students = await response.json();
+
+
+            return students;
+            
+        }
+            // console.log("1 : Message");
+            // let a = test1();
+            // console.log("4 : Message");
+            // console.log(a);
+
+            
+            // Finding Error Function call //
+            test1().then((res) =>{
+                console.log(res);
+            }).catch((error) =>{
+                console.log(error);
+            })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

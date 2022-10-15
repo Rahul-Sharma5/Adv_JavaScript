@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Advance Js)Generators</title>
+
+    <script>
+        function *generater(){  // * is denotes as Generators //
+            console.log('First Message');
+            yield 'yield no.1';
+            console.log('Second Message');
+            yield 'yield no.2';
+        }
+
+        let g = generater();
+        console.log(g.next());
+        console.log(g.next());
+        console.log(g.next());
+
+        // looping //
+
+        function *generateit(){
+            let nextNum = 300;
+            while (true){
+                yield(nextNum++);
+            }
+        }
+
+        let gen = generateit();
+        // console.log(gen.next().value);
+        // console.log(gen.next().value);
+        // console.log(gen.next().value);
+        // console.log(gen.next().value);
+
+        for(let value of gen){
+            if(value > 308) break;
+            console.log(value);
+        }
+
+        // New Tarika for yield //
+
+        function *generateit1(){
+            let yArray = [yield,yield,yield];
+            console.log(`Result : ${yArray}`);
+        }
+
+        let yArr = generateit1();
+        yArr.next();
+        yArr.next(500);
+        yArr.next(600);
+        yArr.next(700);
+
+        // for string //
+        // yArr.next("PHP");
+        // yArr.next("Python");
+        // yArr.next("Java");
+
+        // String + Number Print //
+
+        function *generateit2(){
+            yield 55;
+            yield* ['NodeJs', 'Angular', 'React'];
+        }
+
+        let ysn = generateit2();
+        console.log(ysn.next().value);
+        console.log(ysn.next().value);
+        console.log(ysn.next().value);
+        console.log(ysn.next().value);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
